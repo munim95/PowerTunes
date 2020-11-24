@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="rescan_folders"
+        app:title="Rescan Music Folders" />
+
+    <Preference
+        app:key="music_folders"
+        app:title="Music Folders"
+        app:summary="Select Folders To Scan For Music" />
+    <PreferenceCategory
+        app:key="visual_category"
+        app:title="Visual">
+        <SwitchPreferenceCompat
+            app:key="disable_bottom_card_blur"
+            app:title="Disable bottom card blur" />
+        <SwitchPreferenceCompat
+            app:key="disable_bottom_card_static"
+            app:title="Disable bottom card slide" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="other_category"
+        app:title="Other">
+        <Preference
+            app:key="feedback"
+            app:title="Send feedback"
+            app:summary="Report technical issues or suggest new features"/>
+        <Preference
+            app:key="about"
+            app:title="About"
+            app:summary="PowerTunes version/Developer info"/>
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

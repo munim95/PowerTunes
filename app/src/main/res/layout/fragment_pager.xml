@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/nowPlayingViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--<View-->
+        <!--android:id="@+id/disableTouch"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:clickable="true"-->
+        <!--android:visibility="visible"/>-->
+
+    <!--will contain album art, play/pause, elapsed time-->
+    <RelativeLayout
+        android:id="@+id/nowplayingArtHolder"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="50dp"
+        android:layout_centerInParent="true"
+        android:clipChildren="true"
+        android:background="@drawable/now_playing_art_shape">
+        <ImageView
+            android:id="@+id/foregroundAlbumArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.rigid.powertunes.Seekbars.NowPlayingSeekbar
+            android:id="@+id/nowPlayingSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/NowPlayingProgressStyle"
+            android:thumb="@drawable/custom_thumb"
+            android:progress="20"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:indeterminate="false"
+            android:visibility="gone"
+            android:progressTint="#000000"
+            android:alpha="0.5" />
+        <TextView
+            android:id="@+id/nowPlayingElapsedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/nowplaying_card_shape"
+            android:backgroundTint="@color/blackAlpha"
+            android:textColor="@color/white"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/nowplayingDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/nowplaying_card_shape"
+            android:backgroundTint="@color/blackAlpha"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/nowPlayingControlsHolder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/nowplayingArtHolder"
+        android:background="@drawable/nowplaying_card_shape"
+        android:backgroundTint="@color/blackAlpha"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:layout_alignStart="@id/nowplayingArtHolder"
+        android:layout_alignEnd="@id/nowplayingArtHolder">
+
+        <ImageView
+            android:id="@+id/nowPlayingShuffle"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/ic_shuffle_black"
+            android:background="@drawable/button_highlight"
+            android:layout_alignParentStart="true" />
+        <FrameLayout
+            android:id="@+id/nowPlayingRepeatHolder"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_highlight">
+            <ImageView
+                android:id="@+id/nowPlayingRepeat"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/ic_repeat_black_24dp" />
+            <ImageView
+                android:id="@+id/nowPlayingRepeatOne"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_repeat_one_24dp"
+                />
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/nowPlayingPlayPauseHolder"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:id="@+id/nowPlayingPlayBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_highlight"
+                android:src="@drawable/ic_play"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/nowPlayingPauseBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_highlight"
+                android:src="@drawable/ic_pause"
+                android:visibility="visible"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Static layout-->
+<FrameLayout
+    android:id="@+id/nowPlayingCardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottomCardHeight"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/nowplaying_card_shape"
+    android:backgroundTint="@color/blackAlpha"
+    app:layout_anchor="@id/mainFragContainer"
+    app:layout_anchorGravity="bottom"
+    app:layout_dodgeInsetEdges="bottom"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- ALBUM ART BG IV -->
+    <ImageView
+        android:id="@+id/nowPlayingCardBlurryBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/nowPlayingCardViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- SEEKBAR LAYOUT -->
+    <FrameLayout
+        android:id="@+id/nowRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/bottomCardHeight"
+        android:layout_marginEnd="@dimen/bottomCardHeight"
+        android:background="@drawable/card_seekbar_shape">
+        <com.rigid.powertunes.Seekbars.NowPlayingCardSeekBar
+            android:id="@+id/customSeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:thumb="@drawable/custom_thumb"
+            android:thumbTint="@color/blackAlpha"
+            style="@style/CardProgressStyle"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:indeterminate="false"
+            android:progressTint="#000000"
+            android:alpha="0.4"
+            />
+    </FrameLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/cardSongName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:textStyle="bold"-->
+<!--            android:singleLine="true"-->
+<!--            android:ellipsize="end"-->
+<!--            android:textColor="@color/alphabet_background_color"-->
+<!--            />-->
+</FrameLayout>

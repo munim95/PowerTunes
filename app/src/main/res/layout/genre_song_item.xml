@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/folderItemSongHeight"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/nowplaying_card_shape"
+    >
+    <FrameLayout
+        android:id="@+id/genreSongImageFrame"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/genreSongImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher"
+            />
+    </FrameLayout>
+
+    <!--layout for name and artist -->
+    <FrameLayout
+        android:id="@+id/genreSongTitleFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/genreSongImageFrame"
+        >
+
+        <TextView
+            android:id="@+id/genreSongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unknown_song"
+            android:layout_marginTop="5dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:layout_gravity="start|center"
+            android:textColor="@color/white"
+            />
+
+    </FrameLayout>
+</RelativeLayout>

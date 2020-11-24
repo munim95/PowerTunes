@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <!--We implement multi state transitions for Folder Menu(Drag Right), Now Playing(Drag up) and Audio Options(Drag Left)-->
+    <Transition>
+        <OnSwipe/>
+        <KeyFrameSet>
+            <KeyAttribute/>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet>
+        <Constraint/>
+        <Constraint/>
+    </ConstraintSet>
+
+    <ConstraintSet>
+        <Constraint/>
+        <Constraint/>
+    </ConstraintSet>
+
+</MotionScene>

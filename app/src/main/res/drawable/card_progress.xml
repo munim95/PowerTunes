@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background"
+        android:gravity="fill_horizontal"
+        android:drawable="@drawable/nowplaying_card_shape">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/round_edges_dimen"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress"
+        android:gravity="fill_horizontal">
+        <clip android:drawable="@drawable/nowplaying_card_shape"
+            android:clipOrientation="horizontal">
+            <scale android:drawable="@drawable/nowplaying_card_shape">
+                <shape android:shape="rectangle">
+                    <size android:height="50dp"/>
+                    <corners android:radius="@dimen/round_edges_dimen"/>
+                </shape>
+            </scale>
+        </clip>
+    </item>
+</layer-list>

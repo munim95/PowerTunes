@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selection_bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:clickable="true"
+    android:background="@drawable/nowplaying_card_shape"
+    android:backgroundTint="@color/blackAlpha">
+
+    <!--visible on item selection, new peek height = 120dp-->
+    <include layout="@layout/selection_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"/>
+    <include layout="@layout/exp_selection_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"/>
+</RelativeLayout>

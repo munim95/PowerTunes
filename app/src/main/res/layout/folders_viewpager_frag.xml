@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="2">
+
+    <FrameLayout
+        android:id="@+id/foldersTxt1Holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="5dp"
+        android:alpha="0.8"
+        android:background="@drawable/folders_item_shape"
+        android:backgroundTint="@color/black">
+
+        <ImageView
+            android:id="@+id/foldersTxt1Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/foldersTxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/whiteAlpha"
+            android:textStyle="bold"
+            android:layout_gravity="center|bottom"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/foldersTxt2Holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="5dp"
+        android:alpha="0.8"
+        android:background="@drawable/folders_item_shape"
+        android:backgroundTint="@color/black">
+
+        <ImageView
+            android:id="@+id/foldersTxt2Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/foldersTxt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/whiteAlpha"
+            android:layout_gravity="center|bottom"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/foldersTxt3Holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="5dp"
+        android:alpha="0.8"
+        android:background="@drawable/folders_item_shape"
+        android:backgroundTint="@color/black">
+
+        <ImageView
+            android:id="@+id/foldersTxt3Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/foldersTxt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/whiteAlpha"
+            android:layout_gravity="center|bottom"/>
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/foldersTxt4Holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="5dp"
+        android:alpha="0.8"
+        android:background="@drawable/folders_item_shape"
+        android:backgroundTint="@color/black">
+        <ImageView
+            android:id="@+id/foldersTxt4Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/foldersTxt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/whiteAlpha"
+            android:textStyle="bold"
+            android:layout_gravity="center|bottom"/>
+
+    </FrameLayout>
+</GridLayout>

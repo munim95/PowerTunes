@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#c8ffffff</color>
+    <color name="blackAlpha">#212121</color>
+    <color name="black">#000000</color>
+    <color name="CustomTest150">#96303f9f</color>
+    <color name="notification_bg">#e91e63</color>
+    <color name="white">#ffffff</color>
+    <color name="whiteAlpha">#c8ffffff</color>
+    <color name="selection">#8cffffff</color>
+    <color name="alphabet_text_color">#9E9E9E</color>
+    <color name="alphabet_text_selected_color">#3F51B5</color>
+    <color name="alphabet_background_color">#F5F5F5</color>
+    <color name="alphabet_background_selected_color">#9E9E9E</color>
+    <color name="alphabet_background_border_color">#9E9E9E</color>
+</resources>

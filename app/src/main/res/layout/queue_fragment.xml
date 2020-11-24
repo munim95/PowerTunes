@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <TextView
+        android:id="@+id/emptyQueueText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="Queue is empty..."/>
+    <com.rigid.powertunes.recyclerviewhelpers.CustomRecyclerView
+        android:id="@+id/queueRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/rvPaddingBottom"/>
+
+</LinearLayout>

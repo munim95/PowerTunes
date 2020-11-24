@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rigid.powertunes.MultiLevelRv
+        android:id="@+id/filesRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/filesDialogBtnHolder"/>
+
+    <RelativeLayout
+        android:id="@+id/filesDialogBtnHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/dialogFilesCancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/dialogFilesScanBtn"
+            android:text="Cancel"/>
+        <Button
+            android:id="@+id/dialogFilesScanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Scan"/>
+    </RelativeLayout>
+
+</RelativeLayout>

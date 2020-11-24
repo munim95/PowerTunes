@@ -1,0 +1,32 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blackAlpha</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/blackAlpha</item>
+        <item name="android:dialogTheme">@style/CustomDialog</item>
+    </style>
+
+    <style name="CustomDarkActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:dialogTheme">@style/CustomDialog</item>
+    </style>
+
+    <style name="CardProgressStyle" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressDrawable">@drawable/card_progress</item>
+    </style>
+
+    <style name="NowPlayingProgressStyle" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressDrawable">@drawable/nowplaying_progress</item>
+    </style>
+
+    <style name="NowPlayingCardStyle" >
+        <item name="android:drawable">@drawable/nowplaying_card_shape</item>
+    </style>
+
+    <style name="CustomDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TEST LAYOUT COLOURS AND ICONS - CHANGE BEFORE PUBLISH-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainBottomsheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/nowplaying_card_shape"
+    android:backgroundTint="@color/blackAlpha"
+    >
+    <!--android:background="@drawable/nowplaying_card_shape"-->
+
+    <!--visible on item selection, new peek height = 120dp-->
+    <!--<include layout="@layout/selection_options"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:visibility="gone"/>-->
+    <!--<include layout="@layout/exp_selection_options"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:visibility="gone"/>-->
+
+    <ImageView
+        android:id="@+id/foldersBlurryBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+    <include layout="@layout/sheet_peak_height_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"/>
+
+
+    <include layout="@layout/bottomsheet_menu_items"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@+id/sheetPeakTitle"
+        />
+
+    <FrameLayout
+        android:id="@+id/bottomsheet_frag_container"
+        android:layout_below="@+id/bottomsheet_menu_items"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>

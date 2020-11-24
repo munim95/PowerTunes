@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    app:layoutDescription="@xml/main_scene">
+
+    <!--all frag transaction in the container, all songs by default-->
+    <FrameLayout
+        android:id="@+id/mainFragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<include layout="@layout/side_options"/>-->
+    <FrameLayout
+        android:id="@+id/searchFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/bottomSheetScrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true"
+        android:visibility="gone"/>
+
+<!--    &lt;!&ndash;seekbar indicator view&ndash;&gt;-->
+    <FrameLayout
+        android:id="@+id/seekbarIndicator"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@drawable/now_playing_card_seekbar"
+        android:backgroundTint="@color/blackAlpha"
+        android:alpha="0"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        app:layout_anchor="@id/nowPlayingCardLayout"
+        android:layout_marginBottom="60dp"
+        app:layout_anchorGravity="start"
+        app:layout_dodgeInsetEdges="bottom">
+        <TextView
+            android:id="@+id/cardElapsedTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/alphabet_background_color"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <include layout="@layout/now_playing_card_layout"
+        android:id="@+id/nowPlayingCardLayout" />
+    <!--
+        replace main bottom sheet with motion layout
+    -->
+    <include layout="@layout/main_bottomsheet"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:behavior_peekHeight="@dimen/bottomCardHeight"
+        app:layout_insetEdge="bottom"
+        app:layout_behavior=".bottomsheetbehaviours.MainBottomSheet"/>
+
+    <!--selection sheets-->
+    <include layout="@layout/selection_bottomsheet"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:behavior_peekHeight="0dp"
+        android:visibility="visible"
+        app:layout_behavior=".bottomsheetbehaviours.SelectionBottomSheet"/>
+
+    <include layout="@layout/selection_del_confirmation"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:behavior_peekHeight="0dp"
+        android:visibility="visible"
+        app:layout_behavior=".bottomsheetbehaviours.ConfirmationBottomSheet"/>
+
+    <include layout="@layout/new_playlist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:behavior_peekHeight="0dp"
+        android:visibility="visible"
+        app:layout_behavior=".bottomsheetbehaviours.PlaylistBottomSheet"
+        />
+
+    <FrameLayout
+        android:id="@+id/startUpLockView"
+        android:clickable="true"
+        android:background="@color/black"
+        android:alpha="0.7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/startUpScanText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:drawableBottom="@drawable/ic_settings"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Thanks for choosing PowerTunes! Lets find some tunes! Click Me!"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/noSongFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/nowplaying_card_shape"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/mainFragContainer"
+        app:layout_anchorGravity="bottom"
+        android:alpha="0.9">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_song"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

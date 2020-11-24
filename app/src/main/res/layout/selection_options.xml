@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selection_options"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:columnCount="3"
+    android:rowCount="3">
+
+     <CheckBox
+         android:id="@+id/allSelect"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:layout_columnWeight="1"
+         android:layout_rowWeight="1"
+         android:background="@drawable/button_highlight"
+         android:textColor="@color/alphabet_background_color"
+         android:buttonTint="@color/alphabet_background_color"
+         android:text="@string/select_all"/>
+
+    <TextView
+        android:id="@+id/numberOfSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:textColor="@color/alphabet_background_color"
+        android:text="x/x"/>
+    <TextView
+        android:id="@+id/closeSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:drawableEnd="@drawable/ic_close_black_24dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@drawable/button_highlight"
+        android:textColor="@color/alphabet_background_color"
+        android:text="@string/select_close"/>
+
+    <TextView
+        android:id="@+id/addToPlaylistSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_playlist_add"
+        android:gravity="center"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@drawable/button_highlight"
+        android:textColor="@color/alphabet_background_color"
+        android:text="@string/select_playlist"/>
+
+    <TextView
+        android:id="@+id/addToQueueSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_queue_music_24dp"
+        android:gravity="center"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@drawable/button_highlight"
+        android:textColor="@color/alphabet_background_color"
+        android:text="@string/select_queue"/>
+
+    <TextView
+        android:id="@+id/deleteSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_delete_black_24dp"
+        android:gravity="center"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@drawable/button_highlight"
+        android:textColor="@color/alphabet_background_color"
+        android:text="@string/select_delete"/>
+
+    <TextView
+        android:id="@+id/shareSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_share_24dp"
+        android:gravity="center"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@drawable/button_highlight"
+        android:textColor="@color/alphabet_background_color"
+        android:text="@string/select_share"/>
+
+    <TextView
+        android:id="@+id/editInforSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_edit_black_24dp"
+        android:gravity="center"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@drawable/button_highlight"
+        android:textColor="@color/alphabet_background_color"
+        android:text="@string/select_edit_info"/>
+    <TextView
+        android:id="@+id/albumArtSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_image_24dp"
+        android:gravity="center"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:background="@drawable/button_highlight"
+        android:textColor="@color/alphabet_background_color"
+        android:text="@string/select_album_art"/>
+
+
+</GridLayout>
